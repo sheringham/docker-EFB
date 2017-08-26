@@ -22,7 +22,7 @@ $ docker run -d --restart=always \
         --name=ehforwarderbot \
         -v $(pwd)/config.py:/opt/ehForwarderBot/config.py \
         -v $(pwd)/tgdata.db:/opt/ehForwarderBot/plugins/eh_telegram_master/tgdata.db \
-        royx/docker-efb
+        esir/docker-efb
 ```
 
 If an interactive process is needed for authentication (like WeChat), check it in docker logs:

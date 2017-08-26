@@ -1,6 +1,14 @@
 FROM alpine:edge
 MAINTAINER Roy Xiang <developer@royxiang.me>
 
+ARG VCS_REF 
+
+ARG BUILD_DATE
+
+LABEL org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.vcs-url="https://github.com/sheringham/docker-EFB.git" \
+      org.label-schema.vcs-ref=$VCS_REF
+
 ENV LANG C.UTF-8
 
 RUN apk add --update --no-cache ca-certificates
